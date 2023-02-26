@@ -143,7 +143,7 @@ ul.sitemenu-list{
 /*---------------ここからメイン設定---------------*/
 
 .contact-page{
-    background-image: url(/images/top-contact.jpg);
+    background-image: url(https://github.com/yuina-furuya/ABCDEcoffee/blob/main/images/top-contact.jpg?raw=true);
     background-size: cover;
     color: rgb(50, 45, 45);
     padding: 80px;
