@@ -175,7 +175,7 @@ ul.sitemenu-list{
 /*----------トップ設定----------*/
 .top-wrapper{
     height: 100vh;
-    background-image: url(/images/top-index.jpg);
+    background-image: url(https://github.com/yuina-furuya/ABCDEcoffee/blob/main/images/top-index.jpg?raw=true);
     background-size: cover;
     color:white;
     display: flex;
