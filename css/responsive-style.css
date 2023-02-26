@@ -1,0 +1,163 @@
+/*---タブレット用------------------------------*/
+@media(max-width:1000px){
+.wrapper{
+    padding: 20px;
+}
+/*---index-menu----------*/
+.menu-container{
+    width:600px;
+    padding: 10px;
+}
+.menu-container dl{
+    width: 500px;
+}
+.menu-container dt{
+    width: 80%;
+    text-align: left;
+}
+.menu-container dd{
+    width: 20%;
+    text-align: right;
+}
+/*---index-concept-------*/
+.concept-items{
+    display: block;
+}
+.concept-item{
+    width: 60%;
+    margin: 0 auto;
+}
+/*---index-access--------*/
+.access-text,
+.access-map{
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+.access-container{
+    display: block;
+}
+/*---menu-page----------------------*/
+.menu-page{
+    padding: 20px;
+}
+.menu-item{
+    width: 50%;
+}
+/*---news-all-----------------------*/
+.news-all-page{
+    padding: 20px;
+}
+/*---news-page----------------------*/
+.news-page{
+    padding: 120px 20px;
+}
+
+}
+    
+    
+/*---スマートフォン用----------------------------*/
+@media(max-width:670px){
+
+/*---header---------------*/
+nav{
+    display: none;
+}
+.sitemenu-icon{
+    display: flex;/*メニューアイコン表示＆span中央寄せ*/
+}
+/*---index--------------------*/
+h2{
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.wrapper{
+    padding: 10px;
+}
+.container{
+    flex-wrap: wrap;
+}
+/*---index-concept-----------*/
+.concept-items{
+    display: block;
+}
+.concept-item{
+    width: 80%;
+}
+/*---index-menu-------------*/
+.menu-container{
+    width: 90%;
+    padding: 10px;
+}
+.menu-container dl{
+    width: 90%;
+    font-size: 14px;
+}
+.menu-container dt{
+    width: 80%;
+}
+.menu-container dd{
+    width: 20%;
+    text-align: right;
+}
+/*---index-news------------*/
+.news-container{
+    width: 90%;
+    padding: 10px;
+}
+.news-container dl{
+    width: 90%;
+}
+.news-container dt,
+.news-container dd{
+    width: 100%;
+}
+/*---index-access---------*/
+.access-text,
+.access-map{
+    width: 100%;
+    padding: 10px;
+}
+/*---footer---------------*/
+.footer-right{
+    background-color:rgb(60,80,60);
+    width: 100%;
+}
+
+/*---menu-page----------------------------*/
+.menu-page{
+    padding: 20px;
+}
+.menu-item{
+    width: 100%;
+}
+
+/*---news-all----------------------------*/
+.news-all-page{
+    padding: 20px;
+}
+.news-all,
+.news-all dt,
+.news-all dd{
+    width: 100%;
+}
+/*---news-page---------------------------*/
+.news-page{
+    padding: 120px 20px;
+}
+.news-text{
+    width: 100%;
+}
+/*---news-style--------------------------*/
+.news-all{
+    padding: 20px;
+}
+/*---contact-style-----------------------*/
+.contact-page{
+    padding: 80px 20px;
+}
+.contact{
+    padding: 20px;
+}
+
+}

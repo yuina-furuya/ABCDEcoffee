@@ -1,0 +1,357 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 游明朝 Medium;
+}
+a{
+    font-size: 16px;
+    text-decoration:none;
+}
+p{
+    font-size: 16px;
+}
+.container{
+    width:100%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper{
+    padding: 60px;
+    text-align: center;
+    align-items: center;
+}
+
+h3{
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+h4{
+    font-size: 18px;
+    margin: 20px 0;
+}
+.btn{/*メニュー・ニュースボタン共通設定*/
+    margin: 20px 0;
+    padding:10px 60px;
+    border-radius: 5px;
+    transition:all 0.5s;
+    display: inline-block;
+}
+dl{/*メニュー・ニュース・アクセス共通*/
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    margin: 0 auto;
+}
+dd{
+    margin: 0;
+}
+
+/*---------------ここからヘッダー設定---------------*/
+header {
+    background-color:rgba(60,80,60,0.9);
+    width: 100%;
+    height:65px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.header-left{
+    margin-right: auto;/*左寄せ*/
+}
+.header-left a{
+    color:white;
+    font-size:18px;
+    line-height: 65px;
+    margin: 0 15px;
+    display:inline-block;/*クリック範囲拡大*/
+}
+nav{
+    margin-left: auto;/*右寄せ*/
+    font-size: 0;/*インラインブロック要素による隙間回避*/
+}
+nav ul{
+    padding: 0;
+}
+nav li{
+    list-style: none;
+    background-color: rgba(255,255,255,0.3);
+    transition:all 0.5s;
+    display:inline-block;/*横並びにするため*/
+}
+nav li:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+nav a{
+    color:white;
+    padding:0 25px;
+    line-height:65px;
+}
+/*----------スマホ用サイトメニュー設定ここから----------*/
+/*メニューアイコン設定*/
+#sitemenu-icon-check{/*チェックボックスを非表示*/
+    display: none;
+}
+.sitemenu-icon{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 65px;/*押下範囲拡張*/
+    width: 65px;/*押下範囲拡張*/
+    display: none;/*通常非表示,表示時flexで中央寄せ*/
+    justify-content: center;/*spanを中央寄せ*/
+    align-items: center;/*spanを中央寄せ*/
+    z-index: 20;
+}
+.sitemenu-icon span,
+.sitemenu-icon span::before,
+.sitemenu-icon span::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    position: absolute;/*spanをbefore,afterの起点とする*/
+    transition: all 0.5s;
+}
+.sitemenu-icon span::before{
+    bottom: 8px;/*spanを起点に下に8px*/
+}
+.sitemenu-icon span::after{
+    top: 8px;/*spanを起点に上に8px*/
+}
+#sitemenu-icon-check:checked~.sitemenu-icon span{
+    background-color: rgba(255,255,255,0);/*クリック時透明*/
+}
+#sitemenu-icon-check:checked~.sitemenu-icon span::before{
+    bottom: 0;
+    transform: rotate(45deg);/*45度傾ける*/
+}
+#sitemenu-icon-check:checked~.sitemenu-icon span::after{
+    top: 0;
+    transform: rotate(-45deg);/*45度傾ける*/
+}
+/*メニューリスト設定*/
+#sitemenu-icon-check:checked~.sitemenu-list {
+    left: 0;/*クリック時メニュー左から0位置に表示*/
+}
+.sitemenu-list{
+    background-color: rgba(60,80,60,0.9);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 100%;/*左から100%位置で画面外へ*/
+    z-index: 15;
+    transition: all 0.5s;
+}
+.sitemenu-list a{
+    display: inline-block;/*ボタン領域拡張*/
+    width: 100%;
+    height: 100%;
+}
+ul.sitemenu-list{
+    margin: 0;
+    padding: 65px 0 0 0;
+}
+.sitemenu-list li{
+    list-style: none;
+    padding: 15px;
+    border-bottom: 1px solid white;
+    transition:all 0.5s;
+}
+.sitemenu-list li:hover{
+    background-color: rgba(255,255,255,0.5)
+}
+/*----------スマホ用サイトメニュー設定ここまで----------*/
+/*---------------ここまでヘッダー設定---------------*/
+/*--------------------ここからメイン設定---------------------*/
+
+/*----------トップ設定----------*/
+.top-wrapper{
+    height: 100vh;
+    background-image: url(/images/top-index.jpg);
+    background-size: cover;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin: 0;
+}
+/*----------コンセプト設定----------*/
+
+.concept-wrapper{
+    background-color:rgb(50, 45, 45);
+    color:white;
+}
+.concept-wrapper p{
+    margin: 20px 0;
+}
+.concept-items{
+    width:100%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.concept-item{
+    width: 25%;
+}
+.concept-item img{
+    width: 100%;
+}
+
+/*----------メニュー設定----------*/
+
+.menu-wrapper{
+    background-image: url(/images/menu-coffee.jpg);
+    width: 100%;
+    background-size: cover;
+    color:white;
+}
+.menu-container{
+    background-color:rgb(60,80,60);
+    width:800px;
+    padding: 50px;
+    margin: 0 auto;
+}
+.menu-container dl{
+    width: 600px;
+}
+.menu-container dt{
+    width: 40%;
+    text-align: left;
+}
+.menu-container dd{
+    width: 10%;
+}
+a.menu-btn{
+    color:rgb(60,80,60);
+    background-color: white;
+}
+a.menu-btn:hover{
+    background-color: rgba(205, 200, 200, 0.5);
+}
+
+/*----------ニュース設定----------*/
+
+.news-wrapper{
+    background-color:rgb(205, 200, 200);
+    color:rgb(50, 45, 45);
+}
+.news-container{
+    background-color:white;
+    width:100%;
+    padding: 50px;
+    margin: 0 auto;
+}
+.news-container dl{
+    width: 500px;
+    text-align: left;
+}
+.news-container dt{
+    width: 30%;
+}
+.news-container dd{
+    width: 70%;
+}
+.news-container a{
+    color: rgb(50, 45, 45);
+    text-decoration: underline;
+}
+a.news-btn{
+    color:white;
+    background-color: rgb(50, 45, 45);
+    text-decoration: none;
+}
+a.news-btn:hover{
+    background-color: rgba(205, 200, 200, 0.5);
+}
+
+/*----------アクセス設定----------*/
+
+.access-wrapper{
+    background-color:rgb(50, 45, 45);
+    color: white;
+}
+.access-wrapper h3{
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+.access-container{
+    display: flex;
+}
+.access-text{
+    width:50%;
+    padding: 50px;
+    text-align: left;
+}
+.access-text dt{
+    width: 30%;
+}
+.access-text dd{
+    width: 70%;
+}
+.access-map{
+    width: 50%;
+    padding: 50px;
+}
+iframe{
+    width: 100%;
+}
+/*--------------------ここまでメイン設定--------------------*/
+
+/*--------------------ここからフッター設定--------------------*/
+
+footer{
+    background-color:rgb(60,80,60);
+    width: 100%;
+    height: 65px;
+}
+.footer-left{
+    margin-right: auto;/*左寄せ*/
+}
+h1{
+    color:white;
+    font-size:18px;
+    line-height: 65px;
+    margin: 0 15px;
+}
+.footer-right{
+    margin-left: auto;/*右寄せ*/
+    font-size: 0;/*インラインブロック要素による隙間回避*/
+}
+.footer-right p{
+    color: white;
+    padding: 0 25px;
+    margin: 0;
+    display:inline-block;/*横並びにするため*/
+}
+.footer-right ul{
+    padding: 0;
+    display:inline-block;/*横並びにするため*/
+}
+.footer-right li{
+    list-style: none;
+    transition:all 0.5s;
+    display:inline-block;/*横並びにするため*/
+}
+.footer-right li:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+ul a{
+    color:white;
+    padding: 0 25px;
+    line-height:65px;
+    display:inline-block;/*クリック範囲を広げるため*/
+}
+
+/*--------------------ここまでフッター設定--------------------*/
